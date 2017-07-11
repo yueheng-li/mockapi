@@ -1,0 +1,19 @@
+{
+	"db": {
+		"port": 27017,
+		"host": "localhost",
+		"database": "bookdb"
+	},
+	"server": {
+		"port": 3000,
+        "address": "localhost"
+	},
+	"accessControl": {
+		"allowOrigin": "*",
+		"allowMethods": "GET,POST,PUT,DELETE,HEAD,OPTIONS"
+	},
+	"flavor": "nounderscore",
+	"uploadDir": "C:\\A-LICHUNHUI\\03-TypeScript\\ng-books\\node\\public\\images",
+	"debug": true
+
+}

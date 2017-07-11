@@ -1,0 +1,79 @@
+extends layout
+
+block scripts
+    script(type='text/javascript' src='/js/shop.js')
+block content
+    div(class="container")
+        div(class="row clearfix")
+            div(class="col-md-12 column") 
+                h1.
+                    Shop List
+                table(class="table table-bordered table-condensed table-hover table-striped1")
+                  thead
+                    tr
+                      th shop id
+                      th campaign id
+                      th campaign name
+                      th start date
+                      th end date
+                      th budget
+                      th discount type
+                      th discount rate
+                      th coupon batch date
+                      th enable exclusion
+                      th allow combined
+                      th max order
+                      th item registration type
+                      th status
+                      th 
+                  for res, i in results
+                    tr
+                        td= res.shop_id 
+                        td= res.campaign_id 
+                        td= res.campaign_name 
+                        td= res.start_date 
+                        td= res.end_date 
+                        td= res.budget 
+                        td= res.discount_type 
+                        td= res.discount_rate 
+                        td= res.coupon_batch_date 
+                        td= res.enable_exclusion 
+                        td= res.allow_combined 
+                        td= res.max_order 
+                        td= res.item_registration_type 
+                        td= res.status
+                        td
+                          button#delshop(type="button", class="btn-block", onclick="delShop('#{res._id}', this)") del shop
+            div(class="col-md-10 column") 
+            div(class="col-md-2 column")
+              button#addshop(type="submit" class="btn-block" ) add shop
+        br
+        br
+        div(class="row clearfix")
+            div(class="col-md-12 column") 
+              div(class="row clearfix")
+                  div(class="shop col-md-2 column")
+                      label url
+                  div(class="shop col-md-10 column")
+                      input#url(type="text", name="url", style="width: 600px;" value="/shops/11111/campaigns/")
+              div(class="row clearfix")
+                  div(class="shop col-md-2 column")
+                      label post type
+                  div(class="shop col-md-10 column")
+                      select#type
+                        - repeation = [ 'POST', 'PUT']
+                        for res, i in repeation
+                          option(value="#{i}") #{res}
+              div(class="row clearfix")
+                  div(class="shop col-md-2 column")
+                      label data
+                  div(class="shop col-md-10 column")
+                      textarea#data(name="data", rows="8", cols="80") {"_id":"57e371a22583770291d091e2333","shop_id":"shop_A1","campaign_id":1000,"campaign_name":"bingo event","start_date":"2016-09-22T05:52:34.772Z","end_date":"2016-09-22T05:52:34.772Z","budget":10000,"discount_type":"Am","discount_rate":100,"coupon_batch_date":"2016-09-22T05:52:34.772Z","enable_exclusion":true,"allow_combined":true,"max_order":100,"item_registration_type":"register","status":"ok"}
+              div(class="row clearfix")
+                  div(class="shop col-md-2 column")
+                      label response data
+                  div(class="shop col-md-10 column")
+                      textarea#responsedata(name="responsedata", rows="8", cols="80") 
+            div(class="col-md-10 column") 
+            div(class="col-md-2 column")
+              button#posttest(type="submit" class="btn-block" ) post test

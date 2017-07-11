@@ -1,0 +1,95 @@
+extends layout
+
+block scripts
+    script(type='text/javascript' src='/js/jquery-ui.min.js')
+    script(type='text/javascript' src='/js/datepicker.js')
+block content
+    div(class="container")
+        div(class="row clearfix")
+            div(class="col-md-12 column") 
+                h1.
+                    Add Shop 
+                form#formAddShop(name="addshop",method="post",action="/shops/addshop")
+                    div(class="container")
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                label shop id 
+                            div(class="shop col-md-10 column")
+                                input#shopId(type="text", name="shopId")
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                label campaign id 
+                            div(class="shop col-md-10 column")
+                                input#campaignId(type="number", name="campaignId")
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                label campaign name
+                            div(class="shop col-md-10 column")
+                                input#campaignName(type="test", name="campaignName")
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                label start date 
+                            div(class="shop col-md-10 column")
+                                input#startdate(type="text", name="startdate", class="datepicker")
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                label end date
+                            div(class="shop col-md-10 column")
+                                input#enddate(type="text", name="enddate", class="datepicker")
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                label budget
+                            div(class="shop col-md-10 column")
+                                input#budget(type="number", name="budget")
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                label discount type
+                            div(class="shop col-md-10 column")
+                                input#discounttype(type="text", name="discounttype")
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                label discount rate
+                            div(class="shop col-md-10 column")
+                                input#discountrate(type="number", name="discountrate")
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                label coupon batch date
+                            div(class="shop col-md-10 column")
+                                input#couponbatchdate(type="text", name="couponbatchdate", class="datepicker")
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                label enable exclusion
+                            div(class="shop col-md-10 column")
+                                input(type="radio", name="enableexclusion", value="1" checked)
+                                label True
+                                input(type="radio", name="enableexclusion", value="0")
+                                label False
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                label allow combined
+                            div(class="shop col-md-10 column")
+                                input(type="radio", name="allowcombined", value="1" checked)
+                                label True
+                                input(type="radio", name="allowcombined", value="0")
+                                label False
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                label max order
+                            div(class="shop col-md-10 column")
+                                input#maxorder(type="text", name="maxorder")
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                label item registration type
+                            div(class="shop col-md-10 column")
+                                input#itemregistrationtype(type="number", name="itemregistrationtype")
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                label status
+                            div(class="shop col-md-10 column")
+                                input#status(type="text", name="status")
+                        div(class="row clearfix")
+                            div(class="shop col-md-2 column")
+                                button#btnSubmit(type="submit") submit
+                            div(class="shop col-md-10 column")              
+
+
