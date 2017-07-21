@@ -1,8 +1,9 @@
 
 
 --------------------------------------------------------------------------------
+```
 mongodb install && import db
-server: mongod --dbpath "C:\A-LICHUNHUI\mongdb\data"
+server: mongod --dbpath "C:\xxxxx\mongdb\data"
 client: mongo
 
 use bookdb
@@ -48,7 +49,7 @@ mongodb
 npm install formidable@latest
 大文件upload处理
 
-
+```
 ------------------------------------------------------------------------
 mock API
 04.01.02. Get Campaign Information
